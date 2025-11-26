@@ -17,7 +17,7 @@ try {
         if ($senha === $usuario['senha']) {
             $_SESSION['usuario_id'] = $usuario['id'];
             $_SESSION['usuario_nome'] = $nome;
-            header("Location: Menu.php");
+            header("Location: Menu.html");
             exit();
         } else {
             header("Location: login.php?erro=1"); 
