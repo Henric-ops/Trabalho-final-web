@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro de Cerveja</title>
+    <link rel="stylesheet" href="cerveja.css" />
+  </head>
+  <body>
+    <h1>Cadastro de Cerveja</h1>
+
+    <form
+      name="entrada"
+      method="post"
+      action="CadastrarCerveja.php"
+      enctype="multipart/form-data"
+    >
+      <div class="linha">
+        <label
+          >Nome da Cerveja
+          <select name="nomeCerveja" required>
+            <option value="">Selecione</option>
+
+            <option>Affligem</option>
+            <option>Amstel</option>
+            <option>Anchor Steam</option>
+            <option>Antarctica</option>
+            <option>Baden Baden</option>
+            <option>Blue Moon</option>
+            <option>Blumenau</option>
+            <option>Bohemia</option>
+            <option>Brahma</option>
+            <option>Chimay</option>
+            <option>Colorado Appia</option>
+            <option>Colorado Indica</option>
+            <option>Corona</option>
+            <option>Devassa</option>
+            <option>Dogfish Head 90 Minute</option>
+            <option>Eisenbahn</option>
+            <option>Guinness</option>
+            <option>Heineken</option>
+            <option>Hoegaarden</option>
+            <option>Itaipava</option>
+            <option>Lagunitas IPA</option>
+            <option>La Trappe</option>
+            <option>Leffe</option>
+            <option>Oldenburg</option>
+            <option>Original</option>
+            <option>Paulaner</option>
+            <option>Petra</option>
+            <option>Samuel Adams</option>
+            <option>Schin</option>
+            <option>Sierra Nevada Pale Ale</option>
+            <option>Skol</option>
+            <option>Sol</option>
+            <option>Spaten</option>
+            <option>Stella</option>
+            <option>Stone IPA</option>
+          </select>
+        </label>
+
+        <label
+          >Estilo
+          <select name="tipoEstilo" required>
+            <option value="">Selecione</option>
+            <option>Pilsen</option>
+            <option>Lager</option>
+            <option>IPA</option>
+            <option>APA (American Pale Ale)</option>
+            <option>Stout</option>
+            <option>Porter</option>
+            <option>Weiss (Hefeweizen)</option>
+            <option>Witbier</option>
+            <option>Red Ale</option>
+            <option>Brown Ale</option>
+            <option>Strong Ale</option>
+            <option>Bock</option>
+            <option>Dunkel</option>
+            <option>Tripel</option>
+            <option>Dubbel</option>
+            <option>Sour</option>
+            <option>Gose</option>
+            <option>Saison</option>
+            <option>Barleywine</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="linha">
+        <label
+          >Teor alcoólico
+          <input
+            type="number"
+            name="teorAlcoolico"
+            min="0"
+            max="20"
+            step="0.1"
+            required
+          />
+        </label>
+        <label
+          >IBU
+          <input type="text" name="ibu" required />
+        </label>
+      </div>
+
+      <div class="linha">
+        <label
+          >País de origem
+          <select id="pais" name="paisOrigem" required></select>
+        </label>
+      </div>
+
+      <script src="paises.js"></script>
+      <script>
+        const select = document.getElementById("pais");
+        paises.forEach((p) => {
+          const option = document.createElement("option");
+          option.textContent = p;
+          select.appendChild(option);
+        });
+      </script>
+
+      <div class="linha">
+        <label
+          >Data de Degustação
+          <input type="date" name="data" required />
+        </label>
+        <label
+          >Local de Degustação
+          <input type="text" name="local" required />
+        </label>
+      </div>
+
+      <div class="linha">
+        <label
+          >Avaliação (0 a 10)
+          <input type="number" name="avaliacao" min="0" max="10" required />
+        </label>
+        <label
+          >Sugestão de próxima degustação
+          <textarea
+            name="sugestao"
+            rows="3"
+            placeholder="Ex: repetir em 6 meses"
+          ></textarea>
+        </label>
+      </div>
+
+      <div class="linha">
+        <label
+          >Comentário
+          <textarea name="comentario" rows="3"></textarea>
+        </label>
+      </div>
+
+      <div class="linha">
+        <label
+          >Foto do rótulo
+          <input type="file" name="rotulo" accept="image/*" />
+        </label>
+      </div>
+
+      <input type="submit" value="Cadastrar Cerveja" />
+    </form>
+  </body>
+</html>

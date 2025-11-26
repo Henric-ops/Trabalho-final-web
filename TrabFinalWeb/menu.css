@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(135deg, #000000, #000000);
+    color: #FAF0E6;
+}
+
+/* ----- MENU LATERAL ----- */
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 240px;
+    height: 100vh;
+    background-color: #FFA500;
+    padding: 30px 20px;
+    box-shadow: 4px 0 12px rgba(0,0,0,0.40);
+}
+
+.logo {
+    font-size: 1.9em;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 40px;
+}
+
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.menu a {
+    text-decoration: none;
+    font-size: 1.1em;
+    color: #000000;
+    padding: 10px 5px;
+    display: block;
+    transition: 0.3s;
+    font-weight: 500;
+}
+
+.menu a:hover {
+    color: #2F2F2F;
+    transform: scale(1.05);
+}
+
+/* ----- SUBMENU ----- */
+
+.submenu-items {
+    display: none;
+    list-style: none;
+    margin-top: 5px;
+    padding-left: 15px;
+    background-color: #FFA500;
+    border-left: 3px solid #FF8C00;
+    border-radius: 5px;
+}
+
+.submenu-items li a {
+    padding: 10px;
+    color: #000000;
+}
+
+.submenu-items li a:hover {
+    background-color: #FF8C00;
+    color: #000000;
+}
+
+.submenu.ativo .submenu-items {
+    display: block;
+}
+
+.submenu.ativo > a {
+    color: #2F2F2F;
+}
+
+/* ------ CONTEÚDO PRINCIPAL ------ */
+
+.conteudo {
+    margin-left: 260px; /* espaço para a sidebar */
+    padding: 40px;
+    text-align: center;
+}
+
+.conteudo h1 {
+    color: #FFA500;
+    font-size: 2.4em;
+    text-shadow: 2px 2px 5px #000;
+}

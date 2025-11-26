@@ -8,12 +8,14 @@ class Usuario
     private $email;
     private $senha;
 
-    public function __construct($id, $nome, $email, $senha)
-    {
-        $this->nome = $nome;
-        $this->email = $email;
-        $this->senha = $senha;
-    }
+  public function __construct($id = null, $nome = null, $email = null, $senha = null)
+{
+    $this->id = $id;
+    $this->nome = $nome;
+    $this->email = $email;
+    $this->senha = $senha;
+}
+
 
     public function getNome()
     {

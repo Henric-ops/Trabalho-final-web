@@ -2,8 +2,6 @@
 
 class Cerveja
 {
-
-
     private $id;
     private $nome;
     private $tipoEstilo;
@@ -11,39 +9,42 @@ class Cerveja
     private $ibu;
     private $paisOrigem;
     private $fabricante;
-    private $dataDegustacao;
-    private $localDegustacao;
+    private $data;
+    private $local;
     private $avaliacao;
-    private $comentarios;
-    private $fotoRotulo;
+    private $comentario;
+
     private $sugestao;
+    private $rotulo;
 
-
-    public function __construct($id, $nome, $tipoEstilo, $teorAlcoolico, $ibu, $paisOrigem, $fabricante, $dataDegustacao, $localDegustacao, $avaliacao, $comentarios, $fotoRotulo, $sugestao)
+    public function __construct()
     {
-        $this->nome = $nome;
-        $this->tipoEstilo = $tipoEstilo;
-        $this->teorAlcoolico = $teorAlcoolico;
-        $this->ibu = $ibu;
-        $this->paisOrigem = $paisOrigem;
-        $this->fabricante = $fabricante;
-        $this->dataDegustacao = $dataDegustacao;
-        $this->localDegustacao = $localDegustacao;
-        $this->avaliacao = $avaliacao;
-        $this->comentarios = $comentarios;
-        $this->fotoRotulo = $fotoRotulo;
-        $this->sugestao = $sugestao;
+        if (func_num_args() != 0) {
+            $atributos = func_get_args()[0];
+            foreach ($atributos as $atributo => $valor) {
+                if (isset($valor) && property_exists(get_class($this), $atributo)) {
+                    $this->$atributo = $valor;
+                }
+            }
+        }
     }
+
+    public function atualizar($atributos)
+    {
+        foreach ($atributos as $atributo => $valor) {
+            if (isset($valor) && property_exists(get_class($this), $atributo)) {
+                $this->$atributo = $valor;
+            }
+        }
+    }
+
     public function getId()
     {
         return $this->id;
     }
-
-
     public function setId($id)
     {
         $this->id = $id;
-
         return $this;
     }
 
@@ -51,12 +52,9 @@ class Cerveja
     {
         return $this->nome;
     }
-
-
     public function setNome($nome)
     {
         $this->nome = $nome;
-
         return $this;
     }
 
@@ -64,26 +62,19 @@ class Cerveja
     {
         return $this->tipoEstilo;
     }
-
-
     public function setTipoEstilo($tipoEstilo)
     {
         $this->tipoEstilo = $tipoEstilo;
-
         return $this;
     }
-
 
     public function getTeorAlcoolico()
     {
         return $this->teorAlcoolico;
     }
-
-
     public function setTeorAlcoolico($teorAlcoolico)
     {
         $this->teorAlcoolico = $teorAlcoolico;
-
         return $this;
     }
 
@@ -91,114 +82,88 @@ class Cerveja
     {
         return $this->ibu;
     }
-
     public function setIbu($ibu)
     {
         $this->ibu = $ibu;
-
         return $this;
     }
-
 
     public function getPaisOrigem()
     {
         return $this->paisOrigem;
     }
-
-
     public function setPaisOrigem($paisOrigem)
     {
         $this->paisOrigem = $paisOrigem;
-
         return $this;
     }
-
 
     public function getFabricante()
     {
         return $this->fabricante;
     }
-
-
     public function setFabricante($fabricante)
     {
         $this->fabricante = $fabricante;
-
         return $this;
     }
 
-
-    public function getDataDegustacao()
+    public function getData()
     {
-        return $this->dataDegustacao;
+        return $this->data;
     }
-
-
-    public function setDataDegustacao($dataDegustacao)
+    public function setData($data)
     {
-        $this->dataDegustacao = $dataDegustacao;
-
+        $this->data = $data;
         return $this;
     }
 
-    public function getLocalDegustacao()
+    public function getLocal()
     {
-        return $this->localDegustacao;
+        return $this->local;
     }
-
-    public function setLocalDegustacao($localDegustacao)
+    public function setLocal($local)
     {
-        $this->localDegustacao = $localDegustacao;
-
+        $this->local = $local;
         return $this;
     }
-
 
     public function getAvaliacao()
     {
         return $this->avaliacao;
     }
-
     public function setAvaliacao($avaliacao)
     {
         $this->avaliacao = $avaliacao;
-
         return $this;
     }
 
-    public function getComentarios()
+    public function getComentario()
     {
-        return $this->comentarios;
+        return $this->comentario;
     }
-
-    public function setComentarios($comentarios)
+    public function setComentario($comentario)
     {
-        $this->comentarios = $comentarios;
-
+        $this->comentario = $comentario;
         return $this;
     }
 
-    public function getFotoRotulo()
+    public function getRotulo()
     {
-        return $this->fotoRotulo;
+        return $this->rotulo;
     }
-
-
-
-    public function setFotoRotulo($fotoRotulo)
+    public function setRotulo($rotulo)
     {
-        $this->fotoRotulo = $fotoRotulo;
-
+        $this->rotulo = $rotulo;
         return $this;
     }
 
-
+  
     public function getSugestao()
     {
         return $this->sugestao;
     }
-
-
+ 
     public function setSugestao($sugestao)
     {
         $this->sugestao = $sugestao;
@@ -206,28 +171,3 @@ class Cerveja
         return $this;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-?>
