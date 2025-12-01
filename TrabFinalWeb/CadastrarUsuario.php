@@ -4,30 +4,30 @@ include_once __DIR__ . '/UsuarioDAO.php';
 
 if (isset($_POST['nome']) && isset($_POST['email']) && isset($_POST['senha'])) {
 
-    $usuarioDao = new UsuarioDAO();
+    try {
+        $usuarioDao = new UsuarioDAO();
 
-    $usuario = new Usuario(
-        null,
-        $_POST['nome'],
-        $_POST['email'],
-        trim($_POST['senha'])
-        );
+        $usuario = new Usuario([
+            "nome" => $_POST['nome'],
+            "email" => $_POST['email'],
+            "senha" => trim($_POST['senha'])
+        ]);
 
-    $usuarioDao->inserir($usuario);
+        $usuarioDao->inserir($usuario);
 
-    $lista = $usuarioDao->listar();
+        echo "<script>
+                alert('Usuário cadastrado com sucesso!');
+                window.location.href = 'Login.php';
+              </script>";
+        exit();
 
-    foreach ($lista as $usuario) {
-        echo $usuario->getNome() . "<br>";
+    } catch (Exception $e) {
+
+        echo "<script>
+                alert('Erro ao cadastrar usuário!');
+                window.location.href = 'CadastroUsuario.php';
+              </script>";
+        exit();
     }
-
-
-    header("Location: Login.php");
-    exit();
 }
-
-
-
-
-
 ?>

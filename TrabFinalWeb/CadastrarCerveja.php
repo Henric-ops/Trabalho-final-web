@@ -37,10 +37,15 @@ if (isset($_POST['nomeCerveja'], $_POST['tipoEstilo'], $_POST['teorAlcoolico'], 
     $cervejaDao = new CervejaDAO();
     $cervejaDao->inserir($cerveja);
 
-    echo "<script>alert('Cerveja cadastrada com sucesso!');</script>";
+    echo "<script>
+    alert('Cerveja cadastrada com sucesso!');
+    window.location.href = 'Menu.html';
+</script>";
+
 
 } else {
     echo "<script>alert('Erro: Campos obrigatórios não enviados.');</script>";
 }
+
 
 ?>

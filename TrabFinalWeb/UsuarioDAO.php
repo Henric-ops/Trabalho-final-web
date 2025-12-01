@@ -62,12 +62,8 @@ class UsuarioDAO
 
         if ($stmt->rowCount() > 0) {
             $linha = $stmt->fetch(PDO::FETCH_ASSOC);
-            return new Usuario(
-                $linha['id'],
-                $linha['nome'],
-                $linha['email'],
-                $linha['senha']
-            );
+            return new Usuario($linha); 
+
         }
 
         return null;

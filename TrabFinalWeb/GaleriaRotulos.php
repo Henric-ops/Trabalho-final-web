@@ -8,6 +8,7 @@ $result = $conexao->query($sql);
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <title>Galeria de Rótulos</title>
@@ -23,8 +24,8 @@ $result = $conexao->query($sql);
 
             $caminho = "Imagens/" . $row['rotulo'];
 
-        ?>
-            
+            ?>
+
             <div class="card">
 
                 <img src="<?= $caminho ?>" alt="Rótulo da Cerveja">
@@ -36,5 +37,11 @@ $result = $conexao->query($sql);
         <?php } ?>
     </div>
 
+    <div class="btn-voltar-container">
+        <button class="btn-voltar" onclick="window.location.href='Menu.html';">Voltar</button>
+    </div>
+
+
 </body>
+
 </html>

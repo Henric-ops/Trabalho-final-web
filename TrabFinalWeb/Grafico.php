@@ -54,7 +54,7 @@ while ($row = $r3->fetch(PDO::FETCH_ASSOC)) {
 <head>
     <meta charset="UTF-8">
     <title>Gráficos da Cervejaria</title>
-        <link rel="stylesheet" href="Grafico.css" />
+    <link rel="stylesheet" href="grafico.css" />
 
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script>
@@ -77,6 +77,11 @@ while ($row = $r3->fetch(PDO::FETCH_ASSOC)) {
         <h2>Degustações por mês</h2>
         <canvas id="graf3"></canvas>
     </div>
+
+
+<div class="btn-voltar-container">
+    <button class="btn-voltar" onclick="window.location.href='Menu.html';">Voltar</button>
+</div>
 
 
     <script>
