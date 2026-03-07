@@ -2,7 +2,7 @@
 
 # 🍺 BenzaDeus Cervejaria
 
-O **BenzaDeus Cervejaria** é um sistema de gerenciamento de degustações de cerveja (Beer Journal) desenvolvido para catalogar experiências sensoriais de forma organizada. A aplicação permite que entusiastas registrem detalhes técnicos, notas de avaliação e imagens de cada rótulo, além de oferecer um sistema robusto de controle de usuários.
+O BenzaDeus Cervejaria é um sistema de gerenciamento de degustações de cerveja (Beer Journal) desenvolvido como trabalho final da disciplina de Desenvolvimento Backend para Web. O projeto tem como objetivo aplicar conceitos de persistência de dados, programação orientada a objetos e gestão de conteúdo dinâmico para catalogar experiências sensoriais de forma organizada.
 
 ---
 
