@@ -1,0 +1,23 @@
+const paises = [
+  "Alemanha",
+  "Austrália",
+  "Áustria",
+  "Brasil",
+  "Bélgica",
+  "Canadá",
+  "Dinamarca",
+  "Espanha",
+  "Estados Unidos",
+  "França",
+  "Holanda",
+  "Irlanda",
+  "Itália",
+  "Japão",
+  "México",
+  "Noruega",
+  "Portugal",
+  "Rússia",
+  "Suécia",
+  "Suíça",
+
+];
