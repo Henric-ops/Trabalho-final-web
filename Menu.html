@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BenzaDeus</title>
+    <link rel="stylesheet" href="Menu.css" />
+  </head>
+
+  <body>
+    <aside class="sidebar">
+      <div class="logo">BenzaDeus</div>
+
+      <nav>
+        <ul class="menu">
+          <li class="submenu">
+            <a href="#" id="btnCadastro">Cadastro ▼</a>
+
+            <ul class="submenu-items">
+              <li><a href="indexCeva.html">Cadastrar Cerveja</a></li>
+            </ul>
+          </li>
+
+          <li><a href="GaleriaRotulos.php">Galeria de Rótulos</a></li>
+          <li><a href="Grafico.php">Estatísticas</a></li>
+          <li><a href="AlteraUsuario.php">Editar</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="conteudo">
+      <h1>Bem-vindo à BenzaDeus Cervejaria!</h1>
+      <div class="descricao ">
+        <h2>Sobre a BenzaDeus</h2>
+        <p>
+          A BenzaDeus é um espaço dedicado à degustação de cervejas especiais,
+          trazendo rótulos únicos do mundo todo para quem aprecia sabor,
+          tradição e novas experiências. Explore, aproveite e brinde com a
+          gente!
+        </p>
+      </div>
+    </main>
+
+    <script>
+      document
+        .getElementById("btnCadastro")
+        .addEventListener("click", function (e) {
+          e.preventDefault();
+          this.parentElement.classList.toggle("ativo");
+        });
+    </script>
+  </body>
+</html>

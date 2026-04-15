@@ -1,0 +1,127 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: #f6e5d7;
+    background: radial-gradient(circle at top, rgba(255, 221, 150, 0.16), transparent 25%),
+                linear-gradient(180deg, #37200d 0%, #090703 100%);
+}
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 260px;
+    height: 100vh;
+    padding: 32px 22px;
+    background: linear-gradient(180deg, #4f361d 0%, #2a170c 100%);
+    border-right: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 6px 0 24px rgba(0, 0, 0, 0.35);
+}
+
+.logo {
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #f9d294;
+    margin-bottom: 36px;
+}
+
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    margin-bottom: 14px;
+}
+
+.menu a {
+    display: block;
+    padding: 12px 14px;
+    color: #f4e0c7;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 12px;
+    transition: all 0.25s ease;
+}
+
+.menu a:hover,
+.menu a:focus {
+    background: rgba(255, 189, 86, 0.14);
+    color: #ffe7be;
+    transform: translateX(4px);
+}
+
+.submenu-items {
+    display: none;
+    list-style: none;
+    margin: 10px 0 0 0;
+    padding-left: 10px;
+}
+
+.submenu-items li a {
+    padding: 10px 12px;
+    color: #f1d8b0;
+}
+
+.submenu.ativo .submenu-items {
+    display: block;
+}
+
+.submenu > a {
+    cursor: pointer;
+}
+
+.conteudo {
+    margin-left: 280px;
+    padding: 42px 48px;
+    min-height: 100vh;
+}
+
+.conteudo h1 {
+    font-size: 2.8rem;
+    margin-bottom: 14px;
+    color: #ffd087;
+}
+
+.descricao {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 28px;
+    border-radius: 24px;
+    background: rgba(255, 250, 240, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.24);
+}
+
+.descricao h2 {
+    font-size: 1.7rem;
+    margin-bottom: 16px;
+    color: #f9d7ad;
+}
+
+.descricao p {
+    line-height: 1.8;
+    letter-spacing: 0.01em;
+    color: #f1e0cd;
+}
+
+@media (max-width: 900px) {
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+
+    .conteudo {
+        margin-left: 0;
+        padding: 24px;
+    }
+}
